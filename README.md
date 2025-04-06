@@ -50,14 +50,31 @@ These commands assume you are running them from the **root directory** of this r
     *   Execute the `Permutation` client, providing the number *k* as a command-line argument and piping input from a file.
     ```bash
     # On Linux/macOS (replace ~/algs4/algs4.jar with your actual path)
-    java -cp ~/algs4/algs4.jar:src Permutation <k> < inputs/<input-file.txt>
+    java -cp ~/algs4/algs4.jar:src Permutation <k> < inputs-permutation/<input-file.txt>
 
     # On Windows (replace C:\Users\username\algs4\algs4.jar with your actual path)
-    java -cp C:\Users\username\algs4\algs4.jar;src Permutation <k> < inputs/<input-file.txt>
+    java -cp C:\Users\username\algs4\algs4.jar;src Permutation <k> < inputs-permutation/<input-file.txt>
     ```
     *   Replace `<k>` with the desired number of items to print (e.g., `3`).
-    *   Replace `<input-file.txt>` with an actual filename from the `/inputs` directory (e.g., `distinct.txt`).
+    *   Replace `<input-file.txt>` with an actual filename from the `/inputs-permutation` directory (e.g., `distinct.txt`).
     *   *This command tells `java` where to find the compiled classes (`src`) and the library (`algs4.jar`), which program to run (`Permutation`), passes `k` as a command-line argument (`args[0]`), and redirects the content of the input file to standard input.*
+
+3. **Expected output**
+
+    ```bash
+    ~/Desktop/queues> cat distinct.txt
+    A B C D E F G H I
+
+    ~/Desktop/queues> java Permutation 3 < distinct.txt
+    C
+    G
+    A
+
+    ~/Desktop/queues> java Permutation 3 < distinct.txt
+    E
+    F
+    G
+    ```
 
 ## Extra Credit Requirement Met
 
