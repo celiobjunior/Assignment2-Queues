@@ -133,17 +133,14 @@ public class RandomizedQueue<Item> implements Iterable<Item>
         return new Iterator<>()
         {
             private int i = 0;
-
             public boolean hasNext()
             {
                 return i < n;
             }
-
             public void remove()
             {
                 throw new UnsupportedOperationException();
             }
-
             public Item next()
             {
                 if (!hasNext()) throw new NoSuchElementException();
